@@ -220,13 +220,26 @@ section.tinted{background:var(--tint)}
 .arrow{text-align:center;font-family:var(--display);font-size:26px;color:var(--green);line-height:1;padding:6px 0}
 @media (max-width:760px){.app{grid-template-columns:1fr;padding:20px}.app:hover{transform:none;box-shadow:none}}
 
-.app.wide{grid-template-columns:1fr}
-.app.wide .txt{max-width:46em}
 .feat{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .feat li{font-size:14px;border:1px solid var(--rule);background:var(--paper);padding:6px 14px;border-radius:999px}
 .demo{margin:0}
 .demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--deep);border:1px solid var(--ink)}
 .demo figcaption{margin-top:10px}
+.demo-band{background:var(--deep);color:var(--paper);border-top:0;padding:56px 0 64px}
+.demo-band .wrap{display:grid;grid-template-columns:.8fr 1.7fr;gap:32px 48px;align-items:center}
+.demo-band .mono{color:var(--signal)}
+.demo-band h2{font-size:clamp(2.2rem,4.6vw,3.4rem);line-height:1.05;margin:10px 0 14px}
+.demo-band .sub{color:#D8D1BF;font-size:18px;max-width:22em}
+.demo-band .demo video{border:1px solid rgba(201,164,92,.55);box-shadow:0 0 0 8px rgba(201,164,92,.12),0 24px 50px rgba(0,0,0,.35)}
+.demo-band figcaption{color:#B9B29F}
+@media (max-width:860px){.demo-band .wrap{grid-template-columns:1fr}.demo-band{padding:44px 0 52px}}
+.thumb{position:relative;display:block;align-self:start;text-decoration:none}
+.thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--ink)}
+.thumb .play{position:absolute;left:50%;top:calc(50% - 16px);width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--signal);box-shadow:0 8px 22px rgba(20,17,15,.35);transition:transform .15s}
+.thumb .play::after{content:"";position:absolute;left:25px;top:19px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent var(--ink)}
+.thumb:hover .play{transform:scale(1.08)}
+.thumb .mono{display:block;margin-top:10px;color:var(--green)}
+
 /* training */
 .train{border:2px solid var(--ink);background:#FFFDF9}
 .train figure{margin:0}
@@ -303,6 +316,7 @@ footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
   <div class="wrap">
     <a class="brand" href="#atas">dr. Moh. Suprayogi</a>
     <nav class="nav" aria-label="Navigasi">
+      <a class="l" href="#demo" data-en="Demo">Demo</a>
       <a class="l" href="#peran" data-en="Role">Peran</a>
       <a class="l" href="#alur" data-en="Claim flow">Alur klaim</a>
       <a class="l" href="#pengalaman" data-en="Experience">Pengalaman</a>
@@ -326,7 +340,7 @@ footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
       <p class="lede" data-en="I work at RSUD Dompu and read JKN claims with a clinician's eye, from coding to rebuttal.">Saya bekerja di RSUD Dompu dan membaca klaim JKN dengan sudut pandang dokter, dari pengodean sampai sanggahan.</p>
       <div class="cta">
         <a class="btn solid" id="cta-wa" href="https://wa.me/6282359141160" data-en="Message on WhatsApp">Hubungi lewat WhatsApp</a>
-        <a class="btn line" href="#peran" data-en="See how I work">Lihat cara kerja saya</a>
+        <a class="btn line" href="#demo" data-playdemo data-en="&#9654; Watch the 50-second demo">&#9654; Tonton demo 50 detik</a>
       </div>
     </div>
 
@@ -345,6 +359,22 @@ footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
     <div class="it rv" style="--i:3"><div class="big">2</div><div class="cap" data-en="tools I built myself">aplikasi yang saya buat sendiri</div></div>
   </div>
 </div>
+
+<section class="s demo-band" id="demo">
+  <div class="wrap">
+    <div class="rv">
+      <span class="mono" data-en="50-second demo">Demo 50 detik</span>
+      <h2 data-en="See the tool at work.">Lihat aplikasinya bekerja.</h2>
+      <p class="sub" data-en="Daily Inpatient Screening, from pasting the doctor's SOAP note to the claim eligibility status, in under a minute.">Skrining Rawat Inap Harian, dari menempel SOAP dokter sampai status kelayakan klaim, dalam kurang dari satu menit.</p>
+    </div>
+    <figure class="demo rv">
+      <video id="demo-video" controls playsinline preload="none" poster="demo-poster.jpg" width="1280" height="720">
+        <source src="demo.mp4" type="video/mp4">
+      </video>
+      <figcaption class="mono" data-en="Sample data, not real patients.">Data contoh, bukan pasien nyata.</figcaption>
+    </figure>
+  </div>
+</section>
 
 <section class="s" id="tentang">
   <div class="wrap grid">
@@ -525,12 +555,11 @@ footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
           </ul>
           <a class="btn solid ask" data-ask="Skrining Rawat Inap Harian" href="https://wa.me/6282359141160" data-en="Ask for a live demo">Minta demo langsung</a>
         </div>
-        <figure class="demo">
-          <video controls playsinline preload="none" poster="demo-poster.jpg" width="1280" height="720">
-            <source src="demo.mp4" type="video/mp4">
-          </video>
-          <figcaption class="mono" data-en="50-second demo. Sample data, not real patients.">Demo 50 detik. Data contoh, bukan pasien nyata.</figcaption>
-        </figure>
+        <a class="thumb" href="#demo" data-playdemo aria-label="Tonton demo Skrining Rawat Inap Harian">
+          <img src="demo-poster.jpg" width="1280" height="720" loading="lazy" alt="">
+          <span class="play" aria-hidden="true"></span>
+          <span class="mono" data-en="Watch the demo, 50 seconds">Tonton demo, 50 detik</span>
+        </a>
       </article>
     </div>
   </div>
@@ -678,6 +707,16 @@ footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space
       }
       try{navigator.clipboard.writeText(b.getAttribute("data-copy")).then(function(){done(true);},function(){done(false);});}
       catch(x){done(false);}
+    });
+  });
+
+  /* tombol demo: gulir ke video lalu putar */
+  [].forEach.call(document.querySelectorAll("[data-playdemo]"),function(a){
+    a.addEventListener("click",function(e){
+      e.preventDefault();
+      var sec=document.getElementById("demo"),v=document.getElementById("demo-video");
+      sec.scrollIntoView({behavior:"smooth",block:"start"});
+      try{var r=v.play();if(r&&r.catch)r.catch(function(){});}catch(x){}
     });
   });
 
