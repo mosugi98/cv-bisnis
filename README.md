@@ -19,6 +19,8 @@ Website CV dan portofolio dr. Moh. Suprayogi (dokter umum dan verifikator intern
 
 ## Memakai domain sendiri
 
+Domain situs ini: `mohsuprayogi.com` (tercatat di file `CNAME`).
+
 1. Di **Settings > Pages > Custom domain**, isi domain Anda lalu Save. GitHub membuat file `CNAME` otomatis.
 2. Di panel DNS registrar, tambahkan empat A record untuk domain utama:
    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
