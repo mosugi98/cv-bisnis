@@ -1,12 +1,16 @@
 # cv-bisnis
 
-Website CV dan portofolio dr. Moh. Suprayogi (dokter umum dan verifikator internal casemix, RSUD Dompu). Satu halaman, dwibahasa (ID/EN), tanpa build step.
+Website CV dan portofolio dr. Moh. Suprayogi (dokter umum dan verifikator internal casemix, RSUD Dompu). Satu halaman, dwibahasa: `/` (Indonesia) dan `/en/` (Inggris), masing-masing halaman statis agar bisa diindeks Google.
 
 ## Isi
 
 | File | Fungsi |
 |---|---|
-| `index.html` | Seluruh halaman (HTML, CSS, JavaScript) |
+| `src.html` | **Sumber utama.** Edit teks dan tampilan di sini |
+| `build.py` | Membuat `index.html` (ID) dan `en/index.html` (EN) dari `src.html` |
+| `index.html`, `en/index.html` | Hasil build. Jangan diedit manual, akan tertimpa |
+| `og.jpg` | Gambar pratinjau saat tautan dibagikan (1200x630) |
+| `sitemap.xml`, `robots.txt` | Untuk mesin pencari |
 | `foto.jpg` | Foto profil di bagian atas |
 | `pelatihan.jpg` | Foto bagian Pelatihan |
 | `demo.mp4`, `demo-poster.jpg` | Video demo Skrining Rawat Inap Harian dan gambar sampulnya |
@@ -30,4 +34,7 @@ Domain situs ini: `mohsuprayogi.com` (tercatat di file `CNAME`).
 ## Catatan
 
 - Video demo memakai data contoh. Jangan mengganti dengan rekaman yang memuat data pasien sungguhan.
-- Ubah isi halaman langsung di `index.html`. Teks Indonesia ada di isi elemen, teks Inggris di atribut `data-en`.
+- Ubah isi halaman di `src.html`. Teks Indonesia ada di isi elemen, teks Inggris di atribut `data-en` (juga `data-en-alt`, `data-en-aria-label`).
+- Setelah mengedit, jalankan `python3 build.py` (butuh `pip install beautifulsoup4`), lalu commit `src.html`, `index.html`, dan `en/index.html` bersama.
+- Judul, deskripsi, dan data JSON-LD untuk SEO ada di bagian atas `build.py`.
+- Setelah situs tayang, daftarkan `https://mohsuprayogi.com/sitemap.xml` di Google Search Console.

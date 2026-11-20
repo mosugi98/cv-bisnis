@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Dr. Moh. Suprayogi | Casemix Doctor and JKN Claims Verifier</title>
+<meta name="description" content="General practitioner and internal casemix verifier at RSUD Dompu, Indonesia. Helping JKN claims hold up: INA-CBGs, iDRG, ICD-10, VPK/AAK, claim disputes.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="dr. Moh. Suprayogi">
+<meta name="theme-color" content="#0B1F19">
+<link rel="canonical" href="https://mohsuprayogi.com/en/">
+<link rel="alternate" hreflang="id" href="https://mohsuprayogi.com/">
+<link rel="alternate" hreflang="en" href="https://mohsuprayogi.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://mohsuprayogi.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2714%27%20fill%3D%27%230B1F19%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2745%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2740%27%20text-anchor%3D%27middle%27%20fill%3D%27%23C9A45C%27%3ES%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="dr. Moh. Suprayogi">
+<meta property="og:title" content="Dr. Moh. Suprayogi | Casemix Doctor and JKN Claims Verifier">
+<meta property="og:description" content="General practitioner and internal casemix verifier at RSUD Dompu, Indonesia. Helping JKN claims hold up: INA-CBGs, iDRG, ICD-10, VPK/AAK, claim disputes.">
+<meta property="og:url" content="https://mohsuprayogi.com/en/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:image" content="https://mohsuprayogi.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr. Moh. Suprayogi, casemix doctor and JKN claims verifier at RSUD Dompu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dr. Moh. Suprayogi | Casemix Doctor and JKN Claims Verifier">
+<meta name="twitter:description" content="General practitioner and internal casemix verifier at RSUD Dompu, Indonesia. Helping JKN claims hold up: INA-CBGs, iDRG, ICD-10, VPK/AAK, claim disputes.">
+<meta name="twitter:image" content="https://mohsuprayogi.com/og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://mohsuprayogi.com/#person","name":"dr. Moh. Suprayogi","alternateName":["Moh. Suprayogi"],"url":"https://mohsuprayogi.com/","image":"https://mohsuprayogi.com/foto.jpg","jobTitle":"General Practitioner and Internal Casemix Verifier","email":"mailto:mohsuprayogi17@gmail.com","worksFor":{"@type":"Organization","name":"RSUD Dompu","address":{"@type":"PostalAddress","addressLocality":"Dompu","addressRegion":"Nusa Tenggara Barat","addressCountry":"ID"}},"knowsAbout":["Casemix","INA-CBGs","iDRG","ICD-10","ICD-9-CM","Verifikasi Pasca Klaim (VPK)","Audit Administrasi Klaim (AAK)","Dispute klaim JKN","Audit potensi fraud klaim"],"knowsLanguage":["id","en"]},{"@type":"WebSite","@id":"https://mohsuprayogi.com/#website","url":"https://mohsuprayogi.com/","name":"dr. Moh. Suprayogi","inLanguage":["id","en"],"publisher":{"@id":"https://mohsuprayogi.com/#person"}},{"@type":"WebPage","@id":"https://mohsuprayogi.com/en/#webpage","url":"https://mohsuprayogi.com/en/","name":"Dr. Moh. Suprayogi | Casemix Doctor and JKN Claims Verifier","description":"General practitioner and internal casemix verifier at RSUD Dompu, Indonesia. Helping JKN claims hold up: INA-CBGs, iDRG, ICD-10, VPK/AAK, claim disputes.","inLanguage":"en","isPartOf":{"@id":"https://mohsuprayogi.com/#website"},"about":{"@id":"https://mohsuprayogi.com/#person"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://mohsuprayogi.com/og.jpg"}}]}</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Ide tata letak: kolom label di kiri, isi di kanan, seperti jurnal. Satu warna kuning (--signal) hanya untuk titik kerja utama dan ajakan akhir (efek Von Restorff). */
+:root{
+  --paper:#F8F5EF;
+  --ink:#14110F;
+  --muted:#6A6358;
+  --green:#143D32;
+  --deep:#0B1F19;
+  --tint:#EFE9DC;
+  --rule:#DAD2C2;
+  --signal:#C9A45C;
+  --display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.contact :focus-visible,.dock :focus-visible{outline-color:var(--signal)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+button{font-family:inherit}
+
+/* progress */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--signal);transform:scaleX(0);transform-origin:0 50%;z-index:60;pointer-events:none}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(248,245,239,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{font-family:var(--display);font-size:22px;text-decoration:none}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a.l{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:999px;transition:background .15s,color .15s}
+.nav a.l:hover{color:var(--ink);background:var(--tint)}
+.nav a.l[aria-current="true"]{color:var(--paper);background:var(--green)}
+.lang{display:flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden;margin-left:10px}
+.lang a{font:500 12.5px var(--mono);letter-spacing:.06em;background:transparent;color:var(--ink);border:0;padding:8px 13px;cursor:pointer;text-decoration:none;display:block}
+.lang a[aria-current="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:860px){.nav a.l{display:none}.lang{margin-left:0}}
+
+/* hero */
+.hero{padding:52px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px 56px;align-items:center}
+.hero .mono{margin-bottom:18px}
+.hero h1{font-size:clamp(3.2rem,8.6vw,6.6rem);line-height:.95;letter-spacing:-.02em}
+.hero h2{font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.15;margin-top:26px;max-width:19em;color:var(--green)}
+.hero h2 em{font-style:italic}
+.lede{margin-top:20px;max-width:34em;color:var(--muted);font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;font:500 16px var(--body);text-decoration:none;padding:12px 26px;border-radius:999px;border:2px solid var(--green);transition:transform .12s,background .15s,color .15s}
+.btn:active{transform:scale(.97)}
+.btn.solid{background:var(--green);color:var(--paper)}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.btn.line{color:var(--green)}
+.btn.line:hover{background:var(--tint)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* hero gelap: zamrud dengan nama ivory */
+.hero{background:radial-gradient(60% 85% at 78% 42%,rgba(201,164,92,.16),transparent 70%),var(--deep);color:var(--paper);padding:68px 0 76px}
+.hero .mono{color:#B9B29F}
+.hero h2{color:var(--signal)}
+.hero .lede{color:#D8D1BF}
+.hero .btn.solid{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+.hero .btn.solid:hover{background:var(--paper);border-color:var(--paper)}
+.hero .btn.line{border-color:rgba(248,245,239,.7);color:var(--paper)}
+.hero .btn.line:hover{background:rgba(248,245,239,.1)}
+.hero :focus-visible{outline-color:var(--signal)}
+.hero .portrait img{background:#E9E6E0}
+.hero .badge{color:var(--ink)}
+.hero .badge .mono{color:var(--muted)}
+/* hero sheet */
+.portrait{position:relative;max-width:430px;width:100%;margin-left:auto;padding-bottom:40px}
+.portrait .frame{position:relative}
+.portrait .frame::before{content:"";position:absolute;inset:-12px -12px 12px 12px;border:1px solid var(--signal);border-radius:999px 999px 0 0;pointer-events:none}
+.portrait img{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 0%;border-radius:999px 999px 0 0;background:#EDEBE7}
+.sheet{background:#FFFDF9;border:1px solid var(--rule);border-top:3px solid var(--signal);box-shadow:0 22px 44px rgba(20,17,15,.16);padding:20px 22px 18px}
+.badge{position:absolute;left:-30px;bottom:34px;background:#FFFDF9;border:1px solid var(--rule);border-top:3px solid var(--signal);padding:14px 20px 14px;box-shadow:0 18px 36px rgba(20,17,15,.14);display:flex;flex-direction:column;gap:2px}
+.badge .mono{font-size:11px}
+.badge b{font:400 26px/1.1 var(--display)}
+@media (max-width:900px){
+  .portrait{margin:8px auto 0;padding-bottom:0;max-width:360px}
+  .badge{left:12px;bottom:12px}
+}
+.sheet header{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:6px}
+.sheet h3{font-size:22px;line-height:1.1}
+.ck{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--rule);font-size:15px}
+.ck .bx{width:26px;height:26px;border:2px solid var(--green);display:grid;place-items:center;flex:none}
+.ck svg{width:16px;height:16px;fill:none;stroke:var(--green);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.ck path{stroke-dasharray:24;animation:draw .5s ease both;animation-delay:calc(.5s + var(--i) * .22s)}
+@keyframes draw{from{stroke-dashoffset:24}}
+.sheet footer{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;flex-wrap:wrap}
+.sheet .small{font-size:13px;color:var(--muted)}
+.stamp{font:500 12px var(--mono);letter-spacing:.07em;text-transform:uppercase;background:var(--green);color:var(--paper);padding:6px 12px;border-radius:999px;animation:pop .4s cubic-bezier(.2,.9,.3,1.4) 1.5s both}
+@keyframes pop{from{transform:scale(.6)}}
+
+/* facts strip */
+.strip{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip .it{padding:22px 20px 22px 0}
+.strip .it+.it{border-left:1px solid var(--rule);padding-left:22px}
+.strip .big{font:400 clamp(2.4rem,5vw,3.6rem)/1 var(--display);font-variant-numeric:tabular-nums;color:var(--green)}
+.strip .cap{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.4}
+@media (max-width:760px){
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip .it,.strip .it+.it{padding:18px 12px 18px 0;border-left:0}
+  .strip .it:nth-child(even){padding-left:16px;border-left:1px solid var(--rule)}
+  .strip .it:nth-child(n+3){border-top:1px solid var(--rule)}
+}
+
+/* sections */
+section.s{border-top:1px solid var(--rule);padding:64px 0}
+section.tinted{background:var(--tint)}
+.grid{display:grid;grid-template-columns:190px 1fr;gap:20px 48px}
+.grid>.label{position:sticky;top:84px;align-self:start}
+.grid h2{font-size:clamp(2.1rem,4.6vw,3.2rem);line-height:1.06;margin-bottom:24px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.grid>.label{position:static}section.s{padding:44px 0}}
+.lead{font-size:19px;max-width:36em}
+
+.about p{font-size:19px;max-width:36em}
+.about p+p{margin-top:16px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:26px}
+.facts div{font-size:14px;color:var(--muted)}
+.facts b{display:block;font:500 15px var(--body);color:var(--ink)}
+
+/* simulator */
+.try{margin-top:34px}
+.try .mono{display:block;margin-bottom:10px;color:var(--green)}
+.sim{display:grid;grid-template-columns:1.25fr .75fr;border:2px solid var(--ink);background:#FFFDF9}
+.sw{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--rule);padding:14px 20px;min-height:68px;cursor:pointer;color:inherit;transition:background .12s}
+.sw:last-child{border-bottom:0}
+.sw:hover{background:var(--tint)}
+.sw:active{background:#E4DDCF}
+.sw .bx{width:30px;height:30px;border:2px solid var(--ink);display:grid;place-items:center;flex:none;transition:background .15s,border-color .15s}
+.sw svg{width:18px;height:18px;fill:none;stroke:var(--paper);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .12s}
+.sw[aria-checked="true"] .bx{background:var(--green);border-color:var(--green)}
+.sw[aria-checked="true"] svg{opacity:1}
+.sw b{display:block;font:400 24px/1.1 var(--display)}
+.sw small{display:block;color:var(--muted);font-size:14px;margin-top:3px;line-height:1.35}
+.meter{padding:26px 20px;background:var(--tint);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;border-left:2px solid var(--ink)}
+.ring{position:relative;width:150px;height:150px}
+.ring svg{display:block;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:11}
+.ring .bg{stroke:var(--rule)}
+.ring .fg{stroke:var(--green);stroke-linecap:round;stroke-dasharray:326.7;transition:stroke-dashoffset .3s cubic-bezier(.3,.8,.3,1)}
+.ring .num{position:absolute;inset:0;display:grid;place-items:center;font:400 46px var(--display);font-variant-numeric:tabular-nums}
+.verdict{font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:2px solid var(--green);color:var(--green);background:transparent;transition:background .2s,color .2s}
+.verdict.done{background:var(--green);color:var(--paper)}
+.meter p{font-size:14px;color:var(--muted);max-width:16em;line-height:1.4}
+.try .fine{margin-top:10px;font-size:13px;color:var(--muted)}
+.result{margin-top:22px;padding:18px 20px;background:var(--tint);border-left:3px solid var(--green);max-width:42em}
+@media (max-width:700px){.sim{grid-template-columns:1fr}.meter{border-left:0;border-top:2px solid var(--ink)}}
+
+/* flow */
+.flow{list-style:none;margin:26px 0 0;padding:0;position:relative}
+.flow::before{content:"";position:absolute;left:19px;top:20px;bottom:30px;width:2px;background:var(--rule)}
+.flow li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:0 18px;padding-bottom:20px}
+.flow .n{width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);display:grid;place-items:center;font:500 14px var(--mono);position:relative;z-index:1}
+.flow h3{font-size:26px;line-height:1.15;padding-top:4px}
+.flow p{color:var(--muted);font-size:16px;margin-top:3px;max-width:34em}
+.flow .chip{display:inline-block;margin-top:8px;font:500 12px var(--mono);letter-spacing:.04em;border:1px solid var(--green);color:var(--green);padding:3px 10px;border-radius:999px;text-transform:uppercase}
+.flow li.me .box{background:var(--signal);border:1px solid var(--ink);box-shadow:0 16px 32px rgba(20,17,15,.18);padding:16px 20px 18px;margin-bottom:6px}
+.flow li.me .n{background:var(--ink);color:var(--signal)}
+.flow li.me p{color:var(--ink)}
+.flow li.me .tagme{display:inline-block;font:500 11.5px var(--mono);letter-spacing:.07em;text-transform:uppercase;background:var(--ink);color:var(--signal);padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.flow-note{margin-top:8px;font-size:15px;color:var(--muted);max-width:36em}
+
+/* skills */
+.skills{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.skills li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:6px 32px;padding:20px 12px;border-bottom:1px solid var(--rule);transition:background .15s}
+.skills li:hover{background:var(--tint)}
+.skills h3{font-size:26px;line-height:1.15}
+.skills p{color:var(--muted);font-size:16px}
+@media (max-width:640px){.skills li{grid-template-columns:1fr;padding:18px 0}}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:140px 1fr;gap:6px 28px;padding:22px 0;border-top:1px solid var(--rule)}
+.tl li:first-child{border-top:1px solid var(--ink)}
+.tl .yr{font:500 14px var(--mono);color:var(--green)}
+.tl h3{font-size:28px;line-height:1.15}
+.tl .org{font-size:15px;color:var(--muted);margin-top:2px}
+.tl p.d{margin-top:8px;font-size:16px;max-width:34em}
+@media (max-width:640px){.tl li{grid-template-columns:1fr}}
+
+/* apps */
+.app{border:2px solid var(--ink);padding:28px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px 36px;background:#FFFDF9;transition:box-shadow .2s,transform .2s}
+.app:hover{box-shadow:0 18px 40px rgba(20,17,15,.12);transform:translateY(-4px)}
+.app+.app{margin-top:26px}
+.app h3{font-size:36px;line-height:1.08}
+.app .tag{margin-top:6px;color:var(--green);font-size:17px}
+.app .step{display:inline-block;margin-top:12px;font:500 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--green);color:var(--green);padding:3px 10px;border-radius:999px}
+.app dl{margin:16px 0 0}
+.app dt{font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.app dd{margin:4px 0 0;font-size:16px}
+.app .ask{margin-top:20px}
+.mock{background:var(--tint);padding:18px;align-self:start}
+.mock .cap{font:400 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);border:1px solid var(--rule);padding:11px 12px;font-size:14px}
+.row+.row{margin-top:8px}
+.pill{font:500 11px var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--green);color:var(--paper)}
+.pill.rev{border:1px solid var(--green);color:var(--green)}
+.panel{background:var(--paper);border:1px solid var(--rule);padding:12px}
+.panel b{display:block;font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.bar{height:7px;background:var(--rule);margin-top:7px}
+.arrow{text-align:center;font-family:var(--display);font-size:26px;color:var(--green);line-height:1;padding:6px 0}
+@media (max-width:760px){.app{grid-template-columns:1fr;padding:20px}.app:hover{transform:none;box-shadow:none}}
+
+.feat{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.feat li{font-size:14px;border:1px solid var(--rule);background:var(--paper);padding:6px 14px;border-radius:999px}
+.demo{margin:0}
+.demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--deep);border:1px solid var(--ink)}
+.demo figcaption{margin-top:10px}
+.demo-band{background:var(--deep);color:var(--paper);border-top:0;padding:56px 0 64px}
+.demo-band .wrap{display:grid;grid-template-columns:.8fr 1.7fr;gap:32px 48px;align-items:center}
+.demo-band .mono{color:var(--signal)}
+.demo-band h2{font-size:clamp(2.2rem,4.6vw,3.4rem);line-height:1.05;margin:10px 0 14px}
+.demo-band .sub{color:#D8D1BF;font-size:18px;max-width:22em}
+.demo-band .demo video{border:1px solid rgba(201,164,92,.55);box-shadow:0 0 0 8px rgba(201,164,92,.12),0 24px 50px rgba(0,0,0,.35)}
+.demo-band figcaption{color:#B9B29F}
+@media (max-width:860px){.demo-band .wrap{grid-template-columns:1fr}.demo-band{padding:44px 0 52px}}
+.thumb{position:relative;display:block;align-self:start;text-decoration:none}
+.thumb img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--ink)}
+.thumb .play{position:absolute;left:50%;top:calc(50% - 16px);width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--signal);box-shadow:0 8px 22px rgba(20,17,15,.35);transition:transform .15s}
+.thumb .play::after{content:"";position:absolute;left:25px;top:19px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent var(--ink)}
+.thumb:hover .play{transform:scale(1.08)}
+.thumb .mono{display:block;margin-top:10px;color:var(--green)}
+
+/* training */
+.train{border:2px solid var(--ink);background:#FFFDF9}
+.train figure{margin:0}
+.train img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 40%;background:var(--tint)}
+.train .body{padding:24px 28px 26px}
+.train h3{font-size:30px;line-height:1.2;max-width:26em}
+.train .theme{margin-top:12px;color:var(--muted);font-size:16px;max-width:42em}
+.train .facts{margin-top:18px}
+@media (max-width:640px){.train .body{padding:20px}.train h3{font-size:26px}}
+
+/* glossary */
+.anat .code{display:flex;flex-wrap:nowrap;align-items:flex-start}
+.seg{display:flex;flex-direction:column;gap:8px;min-width:0}
+.seg .v{font-family:var(--display);font-size:clamp(2.6rem,9vw,5.2rem);line-height:1}
+.seg .v::after{content:"\2013";color:var(--rule);margin:0 clamp(8px,2.4vw,26px)}
+.seg:last-child .v::after{content:none}
+.seg .l{font:400 10.5px var(--mono);letter-spacing:.03em;text-transform:uppercase;color:var(--muted);border-top:2px solid var(--green);padding-top:6px;max-width:8em;overflow-wrap:anywhere}
+.anat .note{margin-top:14px;font-size:14px;color:var(--muted)}
+.gl{margin-top:28px;border-top:1px solid var(--ink)}
+.gl details{border-bottom:1px solid var(--rule)}
+.gl summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 4px;min-height:56px;font:400 25px/1.2 var(--display)}
+.gl summary::-webkit-details-marker{display:none}
+.gl summary::after{content:"+";font:400 26px var(--body);color:var(--green);transition:transform .2s}
+.gl details[open] summary::after{transform:rotate(45deg)}
+.gl summary:hover{background:var(--tint)}
+.gl details p{padding:0 4px 18px;max-width:38em;color:var(--muted);font-size:16px}
+
+/* contact */
+.contact{background:var(--deep);color:var(--paper);border-top:0}
+.contact .mono{color:#B9B29F}
+.contact h2{font-size:clamp(2.6rem,7vw,5rem);line-height:1;margin-bottom:12px}
+.contact .sub{color:#D8D1BF;max-width:30em;font-size:18px}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
+.way{border-top:1px solid rgba(201,164,92,.4);padding-top:16px}
+.way .big{display:block;font-family:var(--display);font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.2;overflow-wrap:anywhere;text-decoration:none;margin-top:6px}
+.way .big:hover{color:var(--signal)}
+.way .acts{display:flex;gap:16px;margin-top:10px;font-size:15px}
+.way button{font:500 15px var(--body);background:none;border:0;padding:6px 0;color:var(--signal);text-decoration:underline;cursor:pointer}
+.btn.sig{background:var(--signal);border-color:var(--signal);color:var(--ink);margin-top:30px;min-height:56px;font-size:17px}
+.btn.sig:hover{background:var(--paper);border-color:var(--paper)}
+@media (max-width:640px){.ways{grid-template-columns:1fr}}
+footer.foot{background:var(--deep);color:#B9B29F;border-top:1px solid rgba(201,164,92,.25);padding:22px 0 30px;font-size:14px}
+footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* mobile dock */
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:55;display:none;gap:10px;transform:translateY(130%);transition:transform .25s cubic-bezier(.3,.8,.3,1)}
+.dock.show{transform:none}
+.dock .btn{flex:1;min-height:52px;box-shadow:0 6px 18px rgba(11,31,25,.25)}
+.dock .btn.line{background:var(--paper)}
+@media (max-width:760px){.dock{display:flex}body{padding-bottom:0}}
+
+/* scroll reveal: gerak halus saat bagian masuk layar, selalu terlihat tanpa JS */
+@supports (animation-timeline: view()){
+  .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 38%}
+  .rv[style*="--i"]{animation-range:entry calc(var(--i) * 4%) entry calc(38% + var(--i) * 4%)}
+  @keyframes rv{from{opacity:.4;transform:translateY(30px)}to{opacity:1;transform:none}}
+  .sheet{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 520px}
+  @keyframes drift{to{transform:translateY(-26px)}}
+}
+@supports not (animation-timeline: view()){
+  .js .rv{opacity:.2;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease;transition-delay:calc(var(--i,0) * 60ms)}
+  .js .rv.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div aria-hidden="true" class="progress" id="progress"></div>
+<header class="top">
+<div class="wrap">
+<a class="brand" href="#atas">dr. Moh. Suprayogi</a>
+<nav aria-label="Navigation" class="nav">
+<a class="l" href="#demo">Demo</a>
+<a class="l" href="#peran">Role</a>
+<a class="l" href="#alur">Claim flow</a>
+<a class="l" href="#pengalaman">Experience</a>
+<a class="l" href="#aplikasi">Tools</a>
+<a class="l" href="#kontak">Contact</a>
+<div aria-label="Bahasa / Language" class="lang" role="group">
+<a href="../" hreflang="id" lang="id">ID</a>
+<a aria-current="true" href="./" hreflang="en" lang="en">EN</a>
+</div>
+</nav>
+</div>
+</header>
+<main id="atas">
+<section class="hero" id="hero">
+<div class="wrap">
+<div>
+<p class="mono">General practitioner · Internal casemix verifier</p>
+<h1>dr. Moh. Suprayogi</h1>
+<h2>Before a claim reaches BPJS, I read it <em>as a doctor would</em>.</h2>
+<p class="lede">I work at RSUD Dompu, making sure the medical record and the codes on a claim tell the same story.</p>
+<div class="cta">
+<a class="btn solid" href="https://wa.me/6282359141160" id="cta-wa">Chat on WhatsApp</a>
+<a class="btn line" data-playdemo="" href="#demo">▶ Watch the 50-second demo</a>
+</div>
+</div>
+<div class="portrait">
+<div class="frame"><img alt="Portrait of Dr. Moh. Suprayogi in a white coat" fetchpriority="high" height="1100" src="../foto.jpg" width="880"/></div>
+<div class="badge"><span class="mono">Internal casemix verifier</span><b>RSUD Dompu</b></div>
+</div>
+</div>
+</section>
+<div class="strip">
+<div class="wrap">
+<div class="it rv" style="--i:0"><div class="big">2023</div><div class="cap">General practitioner at RSUD Dompu, since</div></div>
+<div class="it rv" style="--i:1"><div class="big">2025</div><div class="cap">Internal casemix verifier, since</div></div>
+<div class="it rv" style="--i:2"><div class="big">6</div><div class="cap">areas of expertise in claims</div></div>
+<div class="it rv" style="--i:3"><div class="big">2</div><div class="cap">tools I built myself</div></div>
+</div>
+</div>
+<section class="s demo-band" id="demo">
+<div class="wrap">
+<div class="rv">
+<span class="mono">50-second demo</span>
+<h2>Watch daily inpatient screening run in 50 seconds.</h2>
+<p class="sub">From the SOAP note a nurse pastes to the claim eligibility status, before the claim is ever verified.</p>
+</div>
+<figure class="demo rv">
+<video controls="" height="720" id="demo-video" playsinline="" poster="../demo-poster.jpg" preload="none" width="1280">
+<source src="../demo.mp4" type="video/mp4"/>
+</video>
+<figcaption class="mono">Sample data, not real patients.</figcaption>
+</figure>
+</div>
+</section>
+<section class="s" id="tentang">
+<div class="wrap grid">
+<div class="label mono rv">About</div>
+<div class="about rv">
+<h2>Why does a doctor handle claims?</h2>
+<p>Because checking a claim means reading the case, not just the codes. I am a general practitioner at RSUD Dompu, and since 2025 also an internal casemix verifier. I check that the diagnosis, procedures and codes agree with each other, and that the medical record backs them up.</p>
+<p>That daily work is where my small tools come from. They speed up claim screening and the replies to pending claims.</p>
+<div class="facts">
+<div><b>Workplace</b>RSUD Dompu</div>
+<div><b>Region</b>Dompu, Nusa Tenggara Barat</div>
+<div><b>Education</b><span>Bachelor of Medicine, Medical Profession (General Practitioner)</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="s" id="peran">
+<div class="wrap grid">
+<div class="label mono rv">Role</div>
+<div>
+<h2 class="rv">Four things I check in every claim.</h2>
+<p class="lead rv">My core job is raising claim quality so the hospital's claims improve. I do that by making sure the diagnosis, procedures, examinations and medical record all agree. Tick them below and watch what happens.</p>
+<div class="try rv">
+<span class="mono">Try it yourself</span>
+<div class="sim">
+<div class="ctrls" id="ctrls">
+<button aria-checked="true" class="sw" data-k="0" role="switch" type="button"><span class="bx"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg></span><span><b>Diagnosis</b><small>Primary and secondary diagnoses match the patient's condition and the codes chosen.</small></span></button>
+<button aria-checked="true" class="sw" data-k="1" role="switch" type="button"><span class="bx"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg></span><span><b>Procedures</b><small>Coded procedures were actually performed and fit the diagnosis.</small></span></button>
+<button aria-checked="false" class="sw" data-k="2" role="switch" type="button"><span class="bx"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg></span><span><b>Examinations</b><small>Supporting examinations and their results back up the diagnosis and the procedures.</small></span></button>
+<button aria-checked="false" class="sw" data-k="3" role="switch" type="button"><span class="bx"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg></span><span><b>Medical record</b><small>Notes from doctors, nurses and support units are complete and agree with one another.</small></span></button>
+</div>
+<div aria-live="polite" class="meter">
+<div class="ring">
+<svg aria-hidden="true" height="150" viewbox="0 0 120 120" width="150"><circle class="bg" cx="60" cy="60" r="52"></circle><circle class="fg" cx="60" cy="60" id="fg" r="52" stroke-dashoffset="163"></circle></svg>
+<div class="num" id="num">2/4</div>
+</div>
+<span class="verdict" id="verdict">Needs work</span>
+<p id="hint">2 more checks before the claim is ready to submit.</p>
+</div>
+</div>
+<p class="fine">Illustrative simulation, not an assessment of a real claim.</p>
+</div>
+<p class="result rv">A claim that is consistent and well supported is less likely to be pended, returned or corrected. That is what I protect.</p>
+</div>
+</div>
+</section>
+<section class="s tinted" id="alur">
+<div class="wrap grid">
+<div class="label mono rv">Claim flow</div>
+<div>
+<h2 class="rv">At which stage do I work?</h2>
+<p class="lead rv">A JKN claim passes through seven stages. I spend most of my time on the yellow one.</p>
+<ol class="flow">
+<li class="rv" style="--i:0">
+<span class="n">1</span>
+<div><h3>Care and medical record</h3><p>Doctors and nurses record the condition, the examinations and the procedures.</p><span class="chip">Daily Inpatient Screening, while the patient is admitted</span></div>
+</li>
+<li class="rv" style="--i:1">
+<span class="n">2</span>
+<div><h3>Coding</h3><p>Diagnoses and procedures receive ICD-10 and ICD-9-CM codes.</p></div>
+</li>
+<li class="rv" style="--i:2">
+<span class="n">3</span>
+<div><h3>Grouping</h3><p>The codes are grouped into a tariff group under INA-CBGs or iDRG.</p></div>
+</li>
+<li class="me rv" style="--i:3">
+<span class="n">4</span>
+<div class="box"><span class="tagme">Where I work most</span><h3>Internal verification</h3><p>Before the claim is submitted, I check that the diagnosis, procedures, examinations and medical record agree and are consistent.</p></div>
+</li>
+<li class="rv" style="--i:4">
+<span class="n">5</span>
+<div><h3>Submission and BPJS verification</h3><p>The claim is submitted to BPJS Kesehatan and verified.</p></div>
+</li>
+<li class="rv" style="--i:5">
+<span class="n">6</span>
+<div><h3>Pending or dispute</h3><p>A claim that is held or contested is answered with the medical record and regulations.</p><span class="chip">Jawab Pending</span></div>
+</li>
+<li class="rv" style="--i:6">
+<span class="n">7</span>
+<div><h3>Post-claim review</h3><p>After payment, a claim can be reviewed again through VPK and AAK.</p></div>
+</li>
+</ol>
+<p class="flow-note rv">Pending, disputes and VPK/AAK are part of my work too. But stage 4 is where I can stop problems before they start.</p>
+</div>
+</div>
+</section>
+<section class="s" id="keahlian">
+<div class="wrap grid">
+<div class="label mono rv">Expertise</div>
+<div>
+<h2 class="rv">Skills I use every day.</h2>
+<ul class="skills">
+<li class="rv" style="--i:0"><h3>Fraud potential audit</h3><p>Reviewing claim patterns and medical evidence that could be judged unreasonable, before they are submitted.</p></li>
+<li class="rv" style="--i:1"><h3>INA-CBGs and iDRG</h3><p>Grouping diagnoses and procedures into claim tariffs under both the INA-CBGs and iDRG systems.</p></li>
+<li class="rv" style="--i:2"><h3>ICD-10 and ICD-9-CM</h3><p>Coding diagnoses (ICD-10) and procedures (ICD-9-CM) from what the medical record actually documents.</p></li>
+<li class="rv" style="--i:3"><h3>VPK and AAK</h3><p>Answering post-claim verification (VPK) and claim administration audit (AAK) findings with medical reasoning.</p></li>
+<li class="rv" style="--i:4"><h3>Claim disputes</h3><p>Writing rebuttals grounded in the medical record and regulations for claims that are rejected or returned.</p></li>
+<li class="rv" style="--i:5"><h3>Claims management with AI</h3><p>Using AI to screen claims and draft replies faster, while the final decision stays with the verifier.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="s" id="pengalaman">
+<div class="wrap grid">
+<div class="label mono rv">Experience</div>
+<div>
+<h2 class="rv">Two roles at RSUD Dompu.</h2>
+<ol class="tl">
+<li class="rv" style="--i:0">
+<span class="yr">2025 to present</span>
+<div>
+<h3>Internal Casemix Verifier</h3>
+<p class="org">RSUD Dompu</p>
+<p class="d">Focus: claim quality improvement, fraud potential audit, INA-CBGs and iDRG coding, VPK/AAK, claim disputes.</p>
+</div>
+</li>
+<li class="rv" style="--i:1">
+<span class="yr">2023 to present</span>
+<div>
+<h3>General Practitioner</h3>
+<p class="org">RSUD Dompu</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</section>
+<section class="s tinted" id="aplikasi">
+<div class="wrap grid">
+<div class="label mono rv">Tools</div>
+<div>
+<h2 class="rv">Two tools that grew out of daily claim work.</h2>
+<article class="app rv">
+<div>
+<h3>Jawab Pending</h3>
+<p class="tag">Draft replies to pending claims.</p>
+<span class="step">Claim flow, stage 6</span>
+<dl>
+<dt>Problem</dt>
+<dd>Pending claims wait for a hospital reply, and writing each one takes time.</dd>
+<dt>How it works</dt>
+<dd>The app reads the pending reason and drafts a reply that points back to the medical record. The verifier reviews and decides.</dd>
+</dl>
+<a class="btn solid ask" data-ask="Jawab Pending" href="https://wa.me/6282359141160">Ask for a demo</a>
+</div>
+<div aria-hidden="true" class="mock">
+<div class="panel"><b>Pending reason</b><div class="bar" style="width:92%"></div><div class="bar" style="width:70%"></div></div>
+<div class="arrow">↓</div>
+<div class="panel"><b>Draft reply</b><div class="bar" style="width:96%"></div><div class="bar" style="width:84%"></div><div class="bar" style="width:55%"></div></div>
+<p class="cap">Illustration of the flow. Not real data.</p>
+</div>
+</article>
+<article class="app wide rv">
+<div class="txt">
+<h3>Skrining Rawat Inap Harian</h3>
+<p class="tag">Daily screening on the inpatient ward.</p>
+<span class="step">Claim flow, stage 1</span>
+<dl>
+<dt>Problem</dt>
+<dd>Missing diagnoses or incomplete records are found only when the claim is verified.</dd>
+<dt>How it works</dt>
+<dd>Every shift, the ward nurse pastes the doctor's SOAP note. The app reads the assessment, fills in the ICD-10 diagnosis and shows the clinical criteria to tick against the record, so fixes happen while the patient is still admitted.</dd>
+</dl>
+<ul class="feat">
+<li>AI reads the SOAP note</li>
+<li>Automatic clinical-criteria checklist</li>
+<li>Red, yellow, green eligibility status</li>
+<li>Runs on the hospital's own server</li>
+</ul>
+<a class="btn solid ask" data-ask="Skrining Rawat Inap Harian" href="https://wa.me/6282359141160">Ask for a live demo</a>
+</div>
+<a aria-label="Watch the Daily Inpatient Screening demo" class="thumb" data-playdemo="" href="#demo">
+<img alt="" height="720" loading="lazy" src="../demo-poster.jpg" width="1280"/>
+<span aria-hidden="true" class="play"></span>
+<span class="mono">Watch the demo, 50 seconds</span>
+</a>
+</article>
+</div>
+</div>
+</section>
+<section class="s" id="pelatihan">
+<div class="wrap grid">
+<div class="label mono rv">Training</div>
+<div class="train rv">
+<figure>
+<img alt="Group photo of participants at the National Casemix Workshop in front of the event banner" height="900" loading="lazy" src="../pelatihan.jpg" width="1600"/>
+</figure>
+<div class="body">
+<h3>Capacity Building in Casemix and Hospital Claims Management with AI</h3>
+<p class="theme">Documentation from the National Casemix Workshop. The theme was AI-based casemix governance, to improve coding accuracy and claim efficiency and to strengthen anti-fraud systems in health facilities.</p>
+<div class="facts">
+<div><b>Date</b><span>23 to 25 October 2026</span></div>
+<div><b>Location</b>Yogyakarta</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="s" id="istilah">
+<div class="wrap grid">
+<div class="label mono rv">Glossary</div>
+<div>
+<h2 class="rv">Claim terms, no jargon.</h2>
+<div class="anat rv">
+<div aria-label="Example of an INA-CBGs code format" class="code" role="group">
+<div class="seg"><span class="v">K</span><span class="l">CMG group</span></div>
+<div class="seg"><span class="v">4</span><span class="l">case type</span></div>
+<div class="seg"><span class="v">10</span><span class="l">sequence number</span></div>
+<div class="seg"><span class="v">I</span><span class="l">severity level</span></div>
+</div>
+<p class="note">Format of an INA-CBGs code, shown as an example. Not a real case.</p>
+</div>
+<div class="gl rv">
+<details><summary>Casemix</summary><p>Grouping patient cases that are similar in diagnosis, procedures and resources used, as a basis for setting tariffs.</p></details>
+<details><summary>INA-CBGs</summary><p>The package payment system in JKN. It sets the hospital's claim amount from the diagnosis and procedures, with three severity levels: mild, moderate and severe.</p></details>
+<details><summary>iDRG</summary><p>A diagnosis-based grouping and payment system designed to move JKN on from INA-CBGs. It extends severity to five levels: mild, mild-moderate, moderate, moderate-severe and severe.</p></details>
+<details><summary>VPK (post-claim verification)</summary><p>A review by BPJS Kesehatan of claims that have already been paid, checking they were correct.</p></details>
+<details><summary>AAK (claim administration audit)</summary><p>A deeper audit of claims that have been paid, triggered by certain risk signals, including a repeated VPK finding.</p></details>
+<details><summary>Pending and dispute</summary><p>A pending claim is held until the hospital completes or explains it. A dispute is when the hospital contests a verification result and argues its case.</p></details>
+</div>
+</div>
+</div>
+</section>
+<section class="s contact" id="kontak">
+<div class="wrap grid">
+<div class="label mono rv">Contact</div>
+<div class="rv">
+<h2>Do your claims keep getting stuck?</h2>
+<p class="sub">Tell me what is going wrong. I am open to jobs, collaborations, training sessions and demos of my tools.</p>
+<a class="btn sig" href="https://wa.me/6282359141160" id="cta-wa2">Chat on WhatsApp</a>
+<div class="ways">
+<div class="way">
+<span class="mono">WhatsApp</span>
+<a class="big" href="https://wa.me/6282359141160" id="wa-big">0823 5914 1160</a>
+<div class="acts"><button data-copy="082359141160" type="button"><span>Copy number</span></button></div>
+</div>
+<div class="way">
+<span class="mono">Email</span>
+<a class="big" href="mailto:mohsuprayogi17@gmail.com">mohsuprayogi17@gmail.com</a>
+<div class="acts"><button data-copy="mohsuprayogi17@gmail.com" type="button"><span>Copy address</span></button></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<span>© 2026 dr. Moh. Suprayogi</span>
+<span>RSUD Dompu, Nusa Tenggara Barat</span>
+</div>
+</footer>
+<div class="dock" id="dock">
+<a class="btn solid" href="https://wa.me/6282359141160" id="dock-wa">WhatsApp</a>
+<a class="btn line" href="mailto:mohsuprayogi17@gmail.com">Email</a>
+</div>
+<script>
+(function(){
+  document.documentElement.className+=" js";
+  var lang=document.documentElement.lang==="en"?"en":"id";
+  var base="https://wa.me/6282359141160?text=";
+  var MSG={id:"Halo dr. Suprayogi, saya ingin bertanya tentang aplikasi atau pelatihan casemix.",en:"Hello Dr. Suprayogi, I would like to ask about your casemix tools or training."};
+  var ASK={id:function(n){return "Halo dr. Suprayogi, saya tertarik dengan demo aplikasi "+n+".";},en:function(n){return "Hello Dr. Suprayogi, I would like a demo of "+n+".";}};
+
+  /* tautan WhatsApp sesuai bahasa halaman */
+  var t=base+encodeURIComponent(MSG[lang]);
+  ["cta-wa","cta-wa2","wa-big","dock-wa"].forEach(function(id){var a=document.getElementById(id);if(a)a.href=t;});
+  [].forEach.call(document.querySelectorAll("[data-ask]"),function(a){a.href=base+encodeURIComponent(ASK[lang](a.getAttribute("data-ask")));});
+
+  /* simulasi */
+  var VERD={
+    id:["Rawan pending","Masih rawan pending","Perlu dibenahi","Hampir siap","Siap diajukan"],
+    en:["Likely to be pended","Still likely to be pended","Needs work","Almost ready","Ready to submit"]
+  };
+  var HINT={
+    id:function(n){return n===4?"Semua bagian sesuai dan konsisten.":(4-n)+" pemeriksaan lagi sebelum klaim siap diajukan.";},
+    en:function(n){return n===4?"Every part agrees and is consistent.":(4-n)+" more check"+(4-n>1?"s":"")+" before the claim is ready to submit.";}
+  };
+  var sw=[].slice.call(document.querySelectorAll(".sw"));
+  var fg=document.getElementById("fg"),num=document.getElementById("num"),verdict=document.getElementById("verdict"),hint=document.getElementById("hint");
+  function renderSim(){
+    var n=sw.filter(function(b){return b.getAttribute("aria-checked")==="true";}).length;
+    fg.setAttribute("stroke-dashoffset",(326.7*(1-n/4)).toFixed(1));
+    num.textContent=n+"/4";
+    verdict.textContent=VERD[lang][n];
+    verdict.className="verdict"+(n===4?" done":"");
+    hint.textContent=HINT[lang](n);
+  }
+  sw.forEach(function(b){b.addEventListener("click",function(){
+    b.setAttribute("aria-checked",b.getAttribute("aria-checked")==="true"?"false":"true");
+    renderSim();
+  });});
+
+  /* salin */
+  [].forEach.call(document.querySelectorAll("[data-copy]"),function(b){
+    b.addEventListener("click",function(){
+      var span=b.querySelector("span"),orig=span.innerHTML;
+      function done(ok){
+        span.textContent=ok?(lang==="en"?"Copied":"Tersalin"):(lang==="en"?"Select the text above and copy it":"Salin manual dari teks di atas");
+        setTimeout(function(){span.innerHTML=orig;},1800);
+      }
+      try{navigator.clipboard.writeText(b.getAttribute("data-copy")).then(function(){done(true);},function(){done(false);});}
+      catch(x){done(false);}
+    });
+  });
+
+  /* tombol demo: gulir ke video lalu putar */
+  [].forEach.call(document.querySelectorAll("[data-playdemo]"),function(a){
+    a.addEventListener("click",function(e){
+      e.preventDefault();
+      var sec=document.getElementById("demo"),v=document.getElementById("demo-video");
+      sec.scrollIntoView({behavior:"smooth",block:"start"});
+      try{var r=v.play();if(r&&r.catch)r.catch(function(){});}catch(x){}
+    });
+  });
+
+  /* progres scroll + dock */
+  var prog=document.getElementById("progress"),dock=document.getElementById("dock"),contact=document.getElementById("kontak");
+  var tick=false;
+  function onScroll(){
+    if(tick)return;tick=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      prog.style.transform="scaleX("+(h>0?Math.min(1,window.scrollY/h):0)+")";
+      var cr=contact.getBoundingClientRect();
+      var show=window.scrollY>620&&cr.top>window.innerHeight*0.6;
+      dock.classList.toggle("show",show);
+      tick=false;
+    });
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  /* nav aktif */
+  var links=[].slice.call(document.querySelectorAll(".nav a.l"));
+  if("IntersectionObserver" in window){
+    var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.removeAttribute("aria-current");});
+          var a=map[e.target.id];if(a)a.setAttribute("aria-current","true");
+        }
+      });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s);});
+
+    /* cadangan reveal untuk browser tanpa scroll-driven animation */
+    if(!(window.CSS&&CSS.supports&&CSS.supports("animation-timeline: view()"))){
+      var rv=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");rv.unobserve(e.target);}});
+      },{rootMargin:"0px 0px -8% 0px",threshold:0.05});
+      [].forEach.call(document.querySelectorAll(".rv"),function(el){rv.observe(el);});
+    }
+  }
+
+  renderSim();
+})();
+</script>
+</body>
+</html>
