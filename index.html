@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portofolio dr. Moh. Suprayogi</title>
+<meta name="description" content="dr. Moh. Suprayogi, dokter umum dan verifikator internal casemix RSUD Dompu. Peningkatan kualitas klaim, INA-CBGs dan iDRG, VPK/AAK, dispute klaim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* Ide tata letak: kolom label di kiri, isi di kanan, seperti jurnal. Satu warna kuning (--signal) hanya untuk titik kerja utama dan ajakan akhir (efek Von Restorff). */
+:root{
+  --paper:#F8F5EF;
+  --ink:#14110F;
+  --muted:#6A6358;
+  --green:#143D32;
+  --deep:#0B1F19;
+  --tint:#EFE9DC;
+  --rule:#DAD2C2;
+  --signal:#C9A45C;
+  --display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.contact :focus-visible,.dock :focus-visible{outline-color:var(--signal)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+button{font-family:inherit}
+
+/* progress */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--signal);transform:scaleX(0);transform-origin:0 50%;z-index:60;pointer-events:none}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(248,245,239,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{font-family:var(--display);font-size:22px;text-decoration:none}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a.l{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:999px;transition:background .15s,color .15s}
+.nav a.l:hover{color:var(--ink);background:var(--tint)}
+.nav a.l[aria-current="true"]{color:var(--paper);background:var(--green)}
+.lang{display:flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden;margin-left:10px}
+.lang button{font:500 12.5px var(--mono);letter-spacing:.06em;background:transparent;color:var(--ink);border:0;padding:8px 13px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:860px){.nav a.l{display:none}.lang{margin-left:0}}
+
+/* hero */
+.hero{padding:52px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px 56px;align-items:center}
+.hero .mono{margin-bottom:18px}
+.hero h1{font-size:clamp(3.2rem,8.6vw,6.6rem);line-height:.95;letter-spacing:-.02em}
+.hero h2{font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.15;margin-top:26px;max-width:19em;color:var(--green)}
+.hero h2 em{font-style:italic}
+.lede{margin-top:20px;max-width:34em;color:var(--muted);font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;font:500 16px var(--body);text-decoration:none;padding:12px 26px;border-radius:999px;border:2px solid var(--green);transition:transform .12s,background .15s,color .15s}
+.btn:active{transform:scale(.97)}
+.btn.solid{background:var(--green);color:var(--paper)}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.btn.line{color:var(--green)}
+.btn.line:hover{background:var(--tint)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* hero gelap: zamrud dengan nama ivory */
+.hero{background:radial-gradient(60% 85% at 78% 42%,rgba(201,164,92,.16),transparent 70%),var(--deep);color:var(--paper);padding:68px 0 76px}
+.hero .mono{color:#B9B29F}
+.hero h2{color:var(--signal)}
+.hero .lede{color:#D8D1BF}
+.hero .btn.solid{background:var(--signal);border-color:var(--signal);color:var(--ink)}
+.hero .btn.solid:hover{background:var(--paper);border-color:var(--paper)}
+.hero .btn.line{border-color:rgba(248,245,239,.7);color:var(--paper)}
+.hero .btn.line:hover{background:rgba(248,245,239,.1)}
+.hero :focus-visible{outline-color:var(--signal)}
+.hero .portrait img{background:#E9E6E0}
+.hero .badge{color:var(--ink)}
+.hero .badge .mono{color:var(--muted)}
+/* hero sheet */
+.portrait{position:relative;max-width:430px;width:100%;margin-left:auto;padding-bottom:40px}
+.portrait .frame{position:relative}
+.portrait .frame::before{content:"";position:absolute;inset:-12px -12px 12px 12px;border:1px solid var(--signal);border-radius:999px 999px 0 0;pointer-events:none}
+.portrait img{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 0%;border-radius:999px 999px 0 0;background:#EDEBE7}
+.sheet{background:#FFFDF9;border:1px solid var(--rule);border-top:3px solid var(--signal);box-shadow:0 22px 44px rgba(20,17,15,.16);padding:20px 22px 18px}
+.badge{position:absolute;left:-30px;bottom:34px;background:#FFFDF9;border:1px solid var(--rule);border-top:3px solid var(--signal);padding:14px 20px 14px;box-shadow:0 18px 36px rgba(20,17,15,.14);display:flex;flex-direction:column;gap:2px}
+.badge .mono{font-size:11px}
+.badge b{font:400 26px/1.1 var(--display)}
+@media (max-width:900px){
+  .portrait{margin:8px auto 0;padding-bottom:0;max-width:360px}
+  .badge{left:12px;bottom:12px}
+}
+.sheet header{display:flex;justify-content:space-between;gap:12px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:6px}
+.sheet h3{font-size:22px;line-height:1.1}
+.ck{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--rule);font-size:15px}
+.ck .bx{width:26px;height:26px;border:2px solid var(--green);display:grid;place-items:center;flex:none}
+.ck svg{width:16px;height:16px;fill:none;stroke:var(--green);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.ck path{stroke-dasharray:24;animation:draw .5s ease both;animation-delay:calc(.5s + var(--i) * .22s)}
+@keyframes draw{from{stroke-dashoffset:24}}
+.sheet footer{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;flex-wrap:wrap}
+.sheet .small{font-size:13px;color:var(--muted)}
+.stamp{font:500 12px var(--mono);letter-spacing:.07em;text-transform:uppercase;background:var(--green);color:var(--paper);padding:6px 12px;border-radius:999px;animation:pop .4s cubic-bezier(.2,.9,.3,1.4) 1.5s both}
+@keyframes pop{from{transform:scale(.6)}}
+
+/* facts strip */
+.strip{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip .it{padding:22px 20px 22px 0}
+.strip .it+.it{border-left:1px solid var(--rule);padding-left:22px}
+.strip .big{font:400 clamp(2.4rem,5vw,3.6rem)/1 var(--display);font-variant-numeric:tabular-nums;color:var(--green)}
+.strip .cap{margin-top:6px;font-size:14px;color:var(--muted);line-height:1.4}
+@media (max-width:760px){
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip .it,.strip .it+.it{padding:18px 12px 18px 0;border-left:0}
+  .strip .it:nth-child(even){padding-left:16px;border-left:1px solid var(--rule)}
+  .strip .it:nth-child(n+3){border-top:1px solid var(--rule)}
+}
+
+/* sections */
+section.s{border-top:1px solid var(--rule);padding:64px 0}
+section.tinted{background:var(--tint)}
+.grid{display:grid;grid-template-columns:190px 1fr;gap:20px 48px}
+.grid>.label{position:sticky;top:84px;align-self:start}
+.grid h2{font-size:clamp(2.1rem,4.6vw,3.2rem);line-height:1.06;margin-bottom:24px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.grid>.label{position:static}section.s{padding:44px 0}}
+.lead{font-size:19px;max-width:36em}
+
+.about p{font-size:19px;max-width:36em}
+.about p+p{margin-top:16px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 32px;margin-top:26px}
+.facts div{font-size:14px;color:var(--muted)}
+.facts b{display:block;font:500 15px var(--body);color:var(--ink)}
+
+/* simulator */
+.try{margin-top:34px}
+.try .mono{display:block;margin-bottom:10px;color:var(--green)}
+.sim{display:grid;grid-template-columns:1.25fr .75fr;border:2px solid var(--ink);background:#FFFDF9}
+.sw{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--rule);padding:14px 20px;min-height:68px;cursor:pointer;color:inherit;transition:background .12s}
+.sw:last-child{border-bottom:0}
+.sw:hover{background:var(--tint)}
+.sw:active{background:#E4DDCF}
+.sw .bx{width:30px;height:30px;border:2px solid var(--ink);display:grid;place-items:center;flex:none;transition:background .15s,border-color .15s}
+.sw svg{width:18px;height:18px;fill:none;stroke:var(--paper);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .12s}
+.sw[aria-checked="true"] .bx{background:var(--green);border-color:var(--green)}
+.sw[aria-checked="true"] svg{opacity:1}
+.sw b{display:block;font:400 24px/1.1 var(--display)}
+.sw small{display:block;color:var(--muted);font-size:14px;margin-top:3px;line-height:1.35}
+.meter{padding:26px 20px;background:var(--tint);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;border-left:2px solid var(--ink)}
+.ring{position:relative;width:150px;height:150px}
+.ring svg{display:block;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:11}
+.ring .bg{stroke:var(--rule)}
+.ring .fg{stroke:var(--green);stroke-linecap:round;stroke-dasharray:326.7;transition:stroke-dashoffset .3s cubic-bezier(.3,.8,.3,1)}
+.ring .num{position:absolute;inset:0;display:grid;place-items:center;font:400 46px var(--display);font-variant-numeric:tabular-nums}
+.verdict{font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:2px solid var(--green);color:var(--green);background:transparent;transition:background .2s,color .2s}
+.verdict.done{background:var(--green);color:var(--paper)}
+.meter p{font-size:14px;color:var(--muted);max-width:16em;line-height:1.4}
+.try .fine{margin-top:10px;font-size:13px;color:var(--muted)}
+.result{margin-top:22px;padding:18px 20px;background:var(--tint);border-left:3px solid var(--green);max-width:42em}
+@media (max-width:700px){.sim{grid-template-columns:1fr}.meter{border-left:0;border-top:2px solid var(--ink)}}
+
+/* flow */
+.flow{list-style:none;margin:26px 0 0;padding:0;position:relative}
+.flow::before{content:"";position:absolute;left:19px;top:20px;bottom:30px;width:2px;background:var(--rule)}
+.flow li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:0 18px;padding-bottom:20px}
+.flow .n{width:40px;height:40px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);display:grid;place-items:center;font:500 14px var(--mono);position:relative;z-index:1}
+.flow h3{font-size:26px;line-height:1.15;padding-top:4px}
+.flow p{color:var(--muted);font-size:16px;margin-top:3px;max-width:34em}
+.flow .chip{display:inline-block;margin-top:8px;font:500 12px var(--mono);letter-spacing:.04em;border:1px solid var(--green);color:var(--green);padding:3px 10px;border-radius:999px;text-transform:uppercase}
+.flow li.me .box{background:var(--signal);border:1px solid var(--ink);box-shadow:0 16px 32px rgba(20,17,15,.18);padding:16px 20px 18px;margin-bottom:6px}
+.flow li.me .n{background:var(--ink);color:var(--signal)}
+.flow li.me p{color:var(--ink)}
+.flow li.me .tagme{display:inline-block;font:500 11.5px var(--mono);letter-spacing:.07em;text-transform:uppercase;background:var(--ink);color:var(--signal);padding:3px 10px;border-radius:999px;margin-bottom:8px}
+.flow-note{margin-top:8px;font-size:15px;color:var(--muted);max-width:36em}
+
+/* skills */
+.skills{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.skills li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:6px 32px;padding:20px 12px;border-bottom:1px solid var(--rule);transition:background .15s}
+.skills li:hover{background:var(--tint)}
+.skills h3{font-size:26px;line-height:1.15}
+.skills p{color:var(--muted);font-size:16px}
+@media (max-width:640px){.skills li{grid-template-columns:1fr;padding:18px 0}}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:140px 1fr;gap:6px 28px;padding:22px 0;border-top:1px solid var(--rule)}
+.tl li:first-child{border-top:1px solid var(--ink)}
+.tl .yr{font:500 14px var(--mono);color:var(--green)}
+.tl h3{font-size:28px;line-height:1.15}
+.tl .org{font-size:15px;color:var(--muted);margin-top:2px}
+.tl p.d{margin-top:8px;font-size:16px;max-width:34em}
+@media (max-width:640px){.tl li{grid-template-columns:1fr}}
+
+/* apps */
+.app{border:2px solid var(--ink);padding:28px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px 36px;background:#FFFDF9;transition:box-shadow .2s,transform .2s}
+.app:hover{box-shadow:0 18px 40px rgba(20,17,15,.12);transform:translateY(-4px)}
+.app+.app{margin-top:26px}
+.app h3{font-size:36px;line-height:1.08}
+.app .tag{margin-top:6px;color:var(--green);font-size:17px}
+.app .step{display:inline-block;margin-top:12px;font:500 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--green);color:var(--green);padding:3px 10px;border-radius:999px}
+.app dl{margin:16px 0 0}
+.app dt{font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.app dd{margin:4px 0 0;font-size:16px}
+.app .ask{margin-top:20px}
+.mock{background:var(--tint);padding:18px;align-self:start}
+.mock .cap{font:400 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);border:1px solid var(--rule);padding:11px 12px;font-size:14px}
+.row+.row{margin-top:8px}
+.pill{font:500 11px var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--green);color:var(--paper)}
+.pill.rev{border:1px solid var(--green);color:var(--green)}
+.panel{background:var(--paper);border:1px solid var(--rule);padding:12px}
+.panel b{display:block;font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.bar{height:7px;background:var(--rule);margin-top:7px}
+.arrow{text-align:center;font-family:var(--display);font-size:26px;color:var(--green);line-height:1;padding:6px 0}
+@media (max-width:760px){.app{grid-template-columns:1fr;padding:20px}.app:hover{transform:none;box-shadow:none}}
+
+.app.wide{grid-template-columns:1fr}
+.app.wide .txt{max-width:46em}
+.feat{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.feat li{font-size:14px;border:1px solid var(--rule);background:var(--paper);padding:6px 14px;border-radius:999px}
+.demo{margin:0}
+.demo video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--deep);border:1px solid var(--ink)}
+.demo figcaption{margin-top:10px}
+/* training */
+.train{border:2px solid var(--ink);background:#FFFDF9}
+.train figure{margin:0}
+.train img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:50% 40%;background:var(--tint)}
+.train .body{padding:24px 28px 26px}
+.train h3{font-size:30px;line-height:1.2;max-width:26em}
+.train .theme{margin-top:12px;color:var(--muted);font-size:16px;max-width:42em}
+.train .facts{margin-top:18px}
+@media (max-width:640px){.train .body{padding:20px}.train h3{font-size:26px}}
+
+/* glossary */
+.anat .code{display:flex;flex-wrap:nowrap;align-items:flex-start}
+.seg{display:flex;flex-direction:column;gap:8px;min-width:0}
+.seg .v{font-family:var(--display);font-size:clamp(2.6rem,9vw,5.2rem);line-height:1}
+.seg .v::after{content:"\2013";color:var(--rule);margin:0 clamp(8px,2.4vw,26px)}
+.seg:last-child .v::after{content:none}
+.seg .l{font:400 10.5px var(--mono);letter-spacing:.03em;text-transform:uppercase;color:var(--muted);border-top:2px solid var(--green);padding-top:6px;max-width:8em;overflow-wrap:anywhere}
+.anat .note{margin-top:14px;font-size:14px;color:var(--muted)}
+.gl{margin-top:28px;border-top:1px solid var(--ink)}
+.gl details{border-bottom:1px solid var(--rule)}
+.gl summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 4px;min-height:56px;font:400 25px/1.2 var(--display)}
+.gl summary::-webkit-details-marker{display:none}
+.gl summary::after{content:"+";font:400 26px var(--body);color:var(--green);transition:transform .2s}
+.gl details[open] summary::after{transform:rotate(45deg)}
+.gl summary:hover{background:var(--tint)}
+.gl details p{padding:0 4px 18px;max-width:38em;color:var(--muted);font-size:16px}
+
+/* contact */
+.contact{background:var(--deep);color:var(--paper);border-top:0}
+.contact .mono{color:#B9B29F}
+.contact h2{font-size:clamp(2.6rem,7vw,5rem);line-height:1;margin-bottom:12px}
+.contact .sub{color:#D8D1BF;max-width:30em;font-size:18px}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
+.way{border-top:1px solid rgba(201,164,92,.4);padding-top:16px}
+.way .big{display:block;font-family:var(--display);font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.2;overflow-wrap:anywhere;text-decoration:none;margin-top:6px}
+.way .big:hover{color:var(--signal)}
+.way .acts{display:flex;gap:16px;margin-top:10px;font-size:15px}
+.way button{font:500 15px var(--body);background:none;border:0;padding:6px 0;color:var(--signal);text-decoration:underline;cursor:pointer}
+.btn.sig{background:var(--signal);border-color:var(--signal);color:var(--ink);margin-top:30px;min-height:56px;font-size:17px}
+.btn.sig:hover{background:var(--paper);border-color:var(--paper)}
+@media (max-width:640px){.ways{grid-template-columns:1fr}}
+footer.foot{background:var(--deep);color:#B9B29F;border-top:1px solid rgba(201,164,92,.25);padding:22px 0 30px;font-size:14px}
+footer.foot .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* mobile dock */
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:55;display:none;gap:10px;transform:translateY(130%);transition:transform .25s cubic-bezier(.3,.8,.3,1)}
+.dock.show{transform:none}
+.dock .btn{flex:1;min-height:52px;box-shadow:0 6px 18px rgba(11,31,25,.25)}
+.dock .btn.line{background:var(--paper)}
+@media (max-width:760px){.dock{display:flex}body{padding-bottom:0}}
+
+/* scroll reveal: gerak halus saat bagian masuk layar, selalu terlihat tanpa JS */
+@supports (animation-timeline: view()){
+  .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 38%}
+  .rv[style*="--i"]{animation-range:entry calc(var(--i) * 4%) entry calc(38% + var(--i) * 4%)}
+  @keyframes rv{from{opacity:.4;transform:translateY(30px)}to{opacity:1;transform:none}}
+  .sheet{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 520px}
+  @keyframes drift{to{transform:translateY(-26px)}}
+}
+@supports not (animation-timeline: view()){
+  .js .rv{opacity:.2;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease;transition-delay:calc(var(--i,0) * 60ms)}
+  .js .rv.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#atas">dr. Moh. Suprayogi</a>
+    <nav class="nav" aria-label="Navigasi">
+      <a class="l" href="#peran" data-en="Role">Peran</a>
+      <a class="l" href="#alur" data-en="Claim flow">Alur klaim</a>
+      <a class="l" href="#pengalaman" data-en="Experience">Pengalaman</a>
+      <a class="l" href="#aplikasi" data-en="Tools">Aplikasi</a>
+      <a class="l" href="#kontak" data-en="Contact">Kontak</a>
+      <div class="lang" role="group" aria-label="Bahasa / Language">
+        <button type="button" id="btn-id" aria-pressed="true">ID</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="atas">
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <p class="mono" data-en="General practitioner · Internal casemix verifier">Dokter Umum · Verifikator Internal Casemix</p>
+      <h1>dr. Moh. Suprayogi</h1>
+      <h2 data-en="Accurate claims start with an <em>accurate medical record</em>.">Klaim yang tepat dimulai dari <em>catatan medis</em> yang tepat.</h2>
+      <p class="lede" data-en="I work at RSUD Dompu and read JKN claims with a clinician's eye, from coding to rebuttal.">Saya bekerja di RSUD Dompu dan membaca klaim JKN dengan sudut pandang dokter, dari pengodean sampai sanggahan.</p>
+      <div class="cta">
+        <a class="btn solid" id="cta-wa" href="https://wa.me/6282359141160" data-en="Message on WhatsApp">Hubungi lewat WhatsApp</a>
+        <a class="btn line" href="#peran" data-en="See how I work">Lihat cara kerja saya</a>
+      </div>
+    </div>
+
+    <div class="portrait">
+    <div class="frame"><img src="foto.jpg" width="880" height="1100" alt="Foto dr. Moh. Suprayogi mengenakan jas dokter"></div>
+    <div class="badge"><span class="mono" data-en="Internal casemix verifier">Verifikator internal casemix</span><b>RSUD Dompu</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="it rv" style="--i:0"><div class="big">2023</div><div class="cap" data-en="General practitioner at RSUD Dompu, since">Dokter umum di RSUD Dompu, sejak</div></div>
+    <div class="it rv" style="--i:1"><div class="big">2025</div><div class="cap" data-en="Internal casemix verifier, since">Verifikator internal casemix, sejak</div></div>
+    <div class="it rv" style="--i:2"><div class="big">6</div><div class="cap" data-en="areas of expertise in claims">bidang keahlian dalam klaim</div></div>
+    <div class="it rv" style="--i:3"><div class="big">2</div><div class="cap" data-en="tools I built myself">aplikasi yang saya buat sendiri</div></div>
+  </div>
+</div>
+
+<section class="s" id="tentang">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="About">Tentang</div>
+    <div class="about rv">
+      <h2 data-en="A doctor on the claims side.">Dokter di sisi klaim.</h2>
+      <p data-en="I am a general practitioner at RSUD Dompu. Since 2025 I have also worked as an internal casemix verifier, checking that diagnoses, procedures and codes agree with each other and that the medical record supports them.">Saya dokter umum di RSUD Dompu. Sejak 2025 saya juga bertugas sebagai verifikator internal casemix: memeriksa apakah diagnosis, tindakan, dan kode saling sesuai, dan apakah rekam medis mendukungnya.</p>
+      <p data-en="From that daily work I build small tools that speed up claim screening and the replies to pending claims.">Dari pekerjaan sehari-hari itu saya membuat aplikasi kecil untuk mempercepat skrining klaim dan jawaban atas klaim pending.</p>
+      <div class="facts">
+        <div><b data-en="Workplace">Tempat bekerja</b>RSUD Dompu</div>
+        <div><b data-en="Region">Wilayah</b>Dompu, Nusa Tenggara Barat</div>
+        <div><b data-en="Education">Pendidikan</b><span data-en="Bachelor of Medicine, Medical Profession (General Practitioner)">S1 Kedokteran, Profesi Dokter Umum</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="peran">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Role">Peran</div>
+    <div>
+      <h2 class="rv" data-en="Improving claim quality.">Peningkatan kualitas klaim.</h2>
+      <p class="lead rv" data-en="My core work is raising the quality of claims so the hospital's claims improve. I do it by making sure every part of a claim agrees with the others and is backed by a consistent medical record.">Pekerjaan inti saya adalah meningkatkan kualitas klaim agar klaim rumah sakit meningkat. Caranya dengan memastikan setiap bagian klaim saling sesuai dan didukung rekam medis yang konsisten.</p>
+
+      <div class="try rv">
+        <span class="mono" data-en="Try it yourself">Coba sendiri</span>
+        <div class="sim">
+          <div class="ctrls" id="ctrls">
+            <button type="button" class="sw" role="switch" aria-checked="true" data-k="0"><span class="bx"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span><b data-en="Diagnosis">Diagnosis</b><small data-en="Primary and secondary diagnoses match the patient's condition and the codes chosen.">Diagnosis utama dan sekunder sesuai dengan kondisi pasien dan kode yang dipilih.</small></span></button>
+            <button type="button" class="sw" role="switch" aria-checked="true" data-k="1"><span class="bx"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span><b data-en="Procedures">Tindakan</b><small data-en="Coded procedures were actually performed and fit the diagnosis.">Tindakan yang dikodekan benar-benar dilakukan dan sesuai dengan diagnosisnya.</small></span></button>
+            <button type="button" class="sw" role="switch" aria-checked="false" data-k="2"><span class="bx"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span><b data-en="Examinations">Pemeriksaan</b><small data-en="Supporting examinations and their results back up the diagnosis and the procedures.">Pemeriksaan penunjang dan hasilnya mendukung diagnosis dan tindakan.</small></span></button>
+            <button type="button" class="sw" role="switch" aria-checked="false" data-k="3"><span class="bx"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></span><span><b data-en="Medical record">Rekam medis</b><small data-en="Notes from doctors, nurses and support units are complete and agree with one another.">Catatan dokter, perawat, dan unit penunjang lengkap dan konsisten satu sama lain.</small></span></button>
+          </div>
+          <div class="meter" aria-live="polite">
+            <div class="ring">
+              <svg width="150" height="150" viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" id="fg" cx="60" cy="60" r="52" stroke-dashoffset="163"/></svg>
+              <div class="num" id="num">2/4</div>
+            </div>
+            <span class="verdict" id="verdict">Perlu perbaikan</span>
+            <p id="hint">Dua pemeriksaan lagi sebelum klaim siap diajukan.</p>
+          </div>
+        </div>
+        <p class="fine" data-en="Illustrative simulation, not an assessment of a real claim.">Simulasi ilustratif, bukan penilaian klaim nyata.</p>
+      </div>
+
+      <p class="result rv" data-en="A claim that is consistent and well supported is less likely to be pended, returned or corrected, which protects the hospital's claim.">Klaim yang sesuai dan konsisten lebih kecil kemungkinannya pending, dikembalikan, atau dikoreksi, sehingga klaim rumah sakit terjaga.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s tinted" id="alur">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Claim flow">Alur klaim</div>
+    <div>
+      <h2 class="rv" data-en="Where I step in.">Di mana saya bekerja.</h2>
+      <p class="lead rv" data-en="A JKN claim passes through seven stages. The yellow one is where my work is concentrated.">Klaim JKN melewati tujuh tahap. Tahap berwarna kuning adalah tempat pekerjaan saya paling terpusat.</p>
+      <ol class="flow">
+        <li class="rv" style="--i:0">
+          <span class="n">1</span>
+          <div><h3 data-en="Care and medical record">Pelayanan dan rekam medis</h3><p data-en="Doctors and nurses record the condition, the examinations and the procedures.">Dokter dan perawat mencatat kondisi, pemeriksaan, dan tindakan.</p><span class="chip" data-en="Daily Inpatient Screening, while the patient is admitted">Skrining Rawat Inap Harian, selagi pasien dirawat</span></div>
+        </li>
+        <li class="rv" style="--i:1">
+          <span class="n">2</span>
+          <div><h3 data-en="Coding">Koding</h3><p data-en="Diagnoses and procedures receive ICD-10 and ICD-9-CM codes.">Diagnosis dan tindakan diberi kode ICD-10 dan ICD-9-CM.</p></div>
+        </li>
+        <li class="rv" style="--i:2">
+          <span class="n">3</span>
+          <div><h3 data-en="Grouping">Pengelompokan</h3><p data-en="The codes are grouped into a tariff group under INA-CBGs or iDRG.">Kode dikelompokkan menjadi grup tarif pada INA-CBGs atau iDRG.</p></div>
+        </li>
+        <li class="me rv" style="--i:3">
+          <span class="n">4</span>
+          <div class="box"><span class="tagme" data-en="My main point">Titik kerja utama saya</span><h3 data-en="Internal verification">Verifikasi internal</h3><p data-en="Diagnosis, procedures, examinations and the medical record are checked to agree and be consistent, before the claim is submitted.">Diagnosis, tindakan, pemeriksaan, dan rekam medis diperiksa agar sesuai dan konsisten, sebelum klaim diajukan.</p></div>
+        </li>
+        <li class="rv" style="--i:4">
+          <span class="n">5</span>
+          <div><h3 data-en="Submission and BPJS verification">Pengajuan dan verifikasi BPJS</h3><p data-en="The claim is submitted to BPJS Kesehatan and verified.">Klaim diajukan ke BPJS Kesehatan dan diverifikasi.</p></div>
+        </li>
+        <li class="rv" style="--i:5">
+          <span class="n">6</span>
+          <div><h3 data-en="Pending or dispute">Pending atau dispute</h3><p data-en="A claim that is held or contested is answered with the medical record and regulations.">Klaim yang ditunda atau dipersoalkan dijawab dengan rekam medis dan regulasi.</p><span class="chip">Jawab Pending</span></div>
+        </li>
+        <li class="rv" style="--i:6">
+          <span class="n">7</span>
+          <div><h3 data-en="Post-claim review">Pemeriksaan pasca klaim</h3><p data-en="After payment, a claim can be reviewed again through VPK and AAK.">Setelah dibayar, klaim dapat diperiksa ulang lewat VPK dan AAK.</p></div>
+        </li>
+      </ol>
+      <p class="flow-note rv" data-en="Pending, disputes and VPK/AAK are also part of my work. Stage 4 is where I can prevent the most problems.">Pending, dispute, dan VPK/AAK juga bagian dari pekerjaan saya. Tahap 4 adalah tempat saya paling bisa mencegah masalah.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="keahlian">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Expertise">Keahlian</div>
+    <div>
+      <h2 class="rv" data-en="What I handle in a claim.">Yang saya tangani dalam sebuah klaim.</h2>
+      <ul class="skills">
+        <li class="rv" style="--i:0"><h3 data-en="Fraud potential audit">Audit potensi fraud</h3><p data-en="Reviewing claim patterns and medical evidence that could be judged unreasonable, before they are submitted.">Menelaah pola klaim dan bukti medis yang berisiko dinilai tidak wajar, sebelum klaim diajukan.</p></li>
+        <li class="rv" style="--i:1"><h3 data-en="INA-CBGs and iDRG">INA-CBGs dan iDRG</h3><p data-en="Grouping diagnoses and procedures into claim tariffs under both the INA-CBGs and iDRG systems.">Pengelompokan diagnosis dan prosedur menjadi tarif klaim pada sistem INA-CBGs dan iDRG.</p></li>
+        <li class="rv" style="--i:2"><h3 data-en="ICD-10 and ICD-9-CM">ICD-10 dan ICD-9-CM</h3><p data-en="Coding diagnoses (ICD-10) and procedures (ICD-9-CM) from what the medical record actually documents.">Pengodean diagnosis (ICD-10) dan prosedur (ICD-9-CM) berdasarkan yang benar-benar tercatat di rekam medis.</p></li>
+        <li class="rv" style="--i:3"><h3 data-en="VPK and AAK">VPK dan AAK</h3><p data-en="Answering post-claim verification (VPK) and claim administration audit (AAK) findings with medical reasoning.">Menjawab temuan Verifikasi Pasca Klaim (VPK) dan Audit Administrasi Klaim (AAK) dengan argumen medis.</p></li>
+        <li class="rv" style="--i:4"><h3 data-en="Claim disputes">Dispute klaim</h3><p data-en="Writing rebuttals grounded in the medical record and regulations for claims that are rejected or returned.">Menyusun sanggahan berdasarkan rekam medis dan regulasi untuk klaim yang ditolak atau dikembalikan.</p></li>
+        <li class="rv" style="--i:5"><h3 data-en="Claims management with AI">Manajemen klaim dengan AI</h3><p data-en="Using AI to screen claims and draft replies faster, while the final decision stays with the verifier.">Memakai AI untuk menyaring klaim dan menyusun draf jawaban lebih cepat, dengan keputusan akhir tetap di tangan verifikator.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="pengalaman">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Experience">Pengalaman</div>
+    <div>
+      <h2 class="rv" data-en="Where I have worked.">Tempat saya bekerja.</h2>
+      <ol class="tl">
+        <li class="rv" style="--i:0">
+          <span class="yr" data-en="2025 – present">2025 – sekarang</span>
+          <div>
+            <h3 data-en="Internal Casemix Verifier">Verifikator Internal Casemix</h3>
+            <p class="org">RSUD Dompu</p>
+            <p class="d" data-en="Focus: claim quality improvement, fraud potential audit, INA-CBGs and iDRG coding, VPK/AAK, claim disputes.">Fokus: peningkatan kualitas klaim, audit potensi fraud, pengodean INA-CBGs dan iDRG, VPK/AAK, dispute klaim.</p>
+          </div>
+        </li>
+        <li class="rv" style="--i:1">
+          <span class="yr" data-en="2023 – present">2023 – sekarang</span>
+          <div>
+            <h3 data-en="General Practitioner">Dokter Umum</h3>
+            <p class="org">RSUD Dompu</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="s tinted" id="aplikasi">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Tools">Aplikasi</div>
+    <div>
+      <h2 class="rv" data-en="Tools I built for claim work.">Aplikasi yang saya buat untuk pekerjaan klaim.</h2>
+
+      <article class="app rv">
+        <div>
+          <h3>Jawab Pending</h3>
+          <p class="tag" data-en="Draft replies to pending claims.">Menyusun jawaban untuk klaim pending.</p>
+          <span class="step" data-en="Claim flow, stage 6">Alur klaim, tahap 6</span>
+          <dl>
+            <dt data-en="Problem">Masalah</dt>
+            <dd data-en="Pending claims wait for a hospital reply, and writing each one takes time.">Klaim berstatus pending menunggu jawaban rumah sakit, dan menyusun tiap jawaban memakan waktu.</dd>
+            <dt data-en="How it works">Cara kerja</dt>
+            <dd data-en="The app reads the pending reason and drafts a reply that points back to the medical record. The verifier reviews and decides.">Aplikasi membaca alasan pending dan menyusun draf jawaban yang merujuk ke rekam medis. Verifikator tetap memeriksa dan memutuskan.</dd>
+          </dl>
+          <a class="btn solid ask" data-ask="Jawab Pending" href="https://wa.me/6282359141160" data-en="Ask for a demo">Minta demo</a>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="panel"><b data-en="Pending reason">Alasan pending</b><div class="bar" style="width:92%"></div><div class="bar" style="width:70%"></div></div>
+          <div class="arrow">&darr;</div>
+          <div class="panel"><b data-en="Draft reply">Draf jawaban</b><div class="bar" style="width:96%"></div><div class="bar" style="width:84%"></div><div class="bar" style="width:55%"></div></div>
+          <p class="cap" data-en="Illustration of the flow. Not real data.">Ilustrasi alur. Bukan data nyata.</p>
+        </div>
+      </article>
+
+      <article class="app wide rv">
+        <div class="txt">
+          <h3>Skrining Rawat Inap Harian</h3>
+          <p class="tag" data-en="Daily screening on the inpatient ward.">Skrining harian di ruang rawat inap.</p>
+          <span class="step" data-en="Claim flow, stage 1">Alur klaim, tahap 1</span>
+          <dl>
+            <dt data-en="Problem">Masalah</dt>
+            <dd data-en="Missing diagnoses or incomplete records are found only when the claim is verified.">Diagnosis yang kurang atau berkas yang belum lengkap baru ketahuan saat klaim diverifikasi.</dd>
+            <dt data-en="How it works">Cara kerja</dt>
+            <dd data-en="Every shift, the ward nurse pastes the doctor's SOAP note. The app reads the assessment, fills in the ICD-10 diagnosis and shows the clinical criteria to tick against the record, so fixes happen while the patient is still admitted.">Tiap shift, perawat ruangan menempel SOAP dokter. Aplikasi membaca assessment, mengisi diagnosis ICD-10, lalu menampilkan kriteria klinis untuk dicentang sesuai berkas, sehingga perbaikan dilakukan selagi pasien masih dirawat.</dd>
+          </dl>
+          <ul class="feat">
+            <li data-en="AI reads the SOAP note">Baca SOAP dengan AI</li>
+            <li data-en="Automatic clinical-criteria checklist">Checklist kriteria klinis otomatis</li>
+            <li data-en="Red, yellow, green eligibility status">Status kelayakan merah, kuning, hijau</li>
+            <li data-en="Runs on the hospital's own server">Berjalan di server rumah sakit</li>
+          </ul>
+          <a class="btn solid ask" data-ask="Skrining Rawat Inap Harian" href="https://wa.me/6282359141160" data-en="Ask for a live demo">Minta demo langsung</a>
+        </div>
+        <figure class="demo">
+          <video controls playsinline preload="none" poster="demo-poster.jpg" width="1280" height="720">
+            <source src="demo.mp4" type="video/mp4">
+          </video>
+          <figcaption class="mono" data-en="50-second demo. Sample data, not real patients.">Demo 50 detik. Data contoh, bukan pasien nyata.</figcaption>
+        </figure>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="pelatihan">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Training">Pelatihan</div>
+    <div class="train rv">
+      <figure>
+        <img src="pelatihan.jpg" width="1600" height="900" loading="lazy" alt="Foto bersama peserta Workshop Nasional Casemix di depan spanduk acara">
+      </figure>
+      <div class="body">
+        <h3 data-en="Capacity Building in Casemix and Hospital Claims Management with AI">Pelatihan Peningkatan Kapasitas Casemix dan Manajemen Klaim Rumah Sakit dengan AI</h3>
+        <p class="theme" data-en="Documentation from the National Casemix Workshop. Theme: casemix governance based on artificial intelligence to improve coding accuracy, claim efficiency and anti-fraud systems in health facilities.">Dokumentasi Workshop Nasional Casemix. Tema: tata kelola casemix berbasis kecerdasan buatan (AI) untuk meningkatkan akurasi koding, efisiensi klaim, dan memperkuat sistem anti fraud di fasilitas pelayanan kesehatan.</p>
+        <div class="facts">
+          <div><b data-en="Date">Tanggal</b><span data-en="23–25 October 2026">23–25 Oktober 2026</span></div>
+          <div><b data-en="Location">Lokasi</b>Yogyakarta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="istilah">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Glossary">Istilah</div>
+    <div>
+      <h2 class="rv" data-en="Terms in plain words.">Istilah dalam bahasa sederhana.</h2>
+      <div class="anat rv">
+        <div class="code" role="group" aria-label="Contoh format kode INA-CBGs">
+          <div class="seg"><span class="v">K</span><span class="l" data-en="CMG group">kelompok CMG</span></div>
+          <div class="seg"><span class="v">4</span><span class="l" data-en="case type">tipe kasus</span></div>
+          <div class="seg"><span class="v">10</span><span class="l" data-en="sequence number">nomor urut</span></div>
+          <div class="seg"><span class="v">I</span><span class="l" data-en="severity level">tingkat keparahan</span></div>
+        </div>
+        <p class="note" data-en="Format of an INA-CBGs code, shown as an example. Not a real case.">Format kode INA-CBGs, ditampilkan sebagai contoh. Bukan kasus nyata.</p>
+      </div>
+      <div class="gl rv">
+        <details><summary data-en="Casemix">Casemix</summary><p data-en="Grouping patient cases that are similar in diagnosis, procedures and resources used, as a basis for setting tariffs.">Pengelompokan kasus pasien yang mirip dari sisi diagnosis, tindakan, dan sumber daya yang dipakai, sebagai dasar menetapkan tarif.</p></details>
+        <details><summary>INA-CBGs</summary><p data-en="The package payment system in JKN. It sets the hospital's claim amount from the diagnosis and procedures, with three severity levels: mild, moderate and severe.">Sistem pembayaran paket dalam JKN. Besaran klaim rumah sakit ditentukan dari diagnosis dan tindakan, dengan tiga tingkat keparahan: ringan, sedang, dan berat.</p></details>
+        <details><summary>iDRG</summary><p data-en="A diagnosis-based grouping and payment system designed to move JKN on from INA-CBGs. It extends severity to five levels: mild, mild-moderate, moderate, moderate-severe and severe.">Sistem pengelompokan dan pembayaran berbasis diagnosis yang dirancang untuk menggantikan INA-CBGs dalam JKN. Tingkat keparahan diperluas menjadi lima: ringan, ringan-sedang, sedang, sedang-berat, dan berat.</p></details>
+        <details><summary data-en="VPK (post-claim verification)">VPK (Verifikasi Pasca Klaim)</summary><p data-en="A review by BPJS Kesehatan of claims that have already been paid, checking they were correct.">Pemeriksaan ulang oleh BPJS Kesehatan atas klaim yang sudah dibayar, untuk memastikan klaim tersebut benar.</p></details>
+        <details><summary data-en="AAK (claim administration audit)">AAK (Audit Administrasi Klaim)</summary><p data-en="A deeper audit of claims that have been paid, triggered by certain risk signals, including a repeated VPK finding.">Audit yang lebih mendalam atas klaim yang sudah dibayar, dipicu oleh sinyal risiko tertentu, termasuk temuan VPK yang berulang.</p></details>
+        <details><summary data-en="Pending and dispute">Pending dan dispute</summary><p data-en="A pending claim is held until the hospital completes or explains it. A dispute is when the hospital contests a verification result and argues its case.">Klaim pending ditahan sampai rumah sakit melengkapi atau menjelaskannya. Dispute adalah saat rumah sakit menyanggah hasil verifikasi dan menyampaikan argumennya.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s contact" id="kontak">
+  <div class="wrap grid">
+    <div class="label mono rv" data-en="Contact">Kontak</div>
+    <div class="rv">
+      <h2 data-en="Let us talk about your claims.">Mari bicara tentang klaim Anda.</h2>
+      <p class="sub" data-en="For a job, a collaboration, a training session or a demo of the tools.">Untuk pekerjaan, kerja sama, pelatihan, atau demo aplikasi.</p>
+      <a class="btn sig" id="cta-wa2" href="https://wa.me/6282359141160" data-en="Message on WhatsApp">Hubungi lewat WhatsApp</a>
+      <div class="ways">
+        <div class="way">
+          <span class="mono">WhatsApp</span>
+          <a class="big" id="wa-big" href="https://wa.me/6282359141160">0823 5914 1160</a>
+          <div class="acts"><button type="button" data-copy="082359141160"><span data-en="Copy number">Salin nomor</span></button></div>
+        </div>
+        <div class="way">
+          <span class="mono">Email</span>
+          <a class="big" href="mailto:mohsuprayogi17@gmail.com">mohsuprayogi17@gmail.com</a>
+          <div class="acts"><button type="button" data-copy="mohsuprayogi17@gmail.com"><span data-en="Copy address">Salin alamat</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>&copy; 2026 dr. Moh. Suprayogi</span>
+    <span>RSUD Dompu, Nusa Tenggara Barat</span>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn solid" id="dock-wa" href="https://wa.me/6282359141160" data-en="WhatsApp">WhatsApp</a>
+  <a class="btn line" href="mailto:mohsuprayogi17@gmail.com">Email</a>
+</div>
+
+<script>
+(function(){
+  document.documentElement.className+=" js";
+  var base="https://wa.me/6282359141160?text=";
+  var MSG={id:"Halo dr. Suprayogi, saya ingin bertanya tentang aplikasi atau pelatihan casemix.",en:"Hello Dr. Suprayogi, I would like to ask about your casemix tools or training."};
+  var ASK={id:function(n){return "Halo dr. Suprayogi, saya tertarik dengan demo aplikasi "+n+".";},en:function(n){return "Hello Dr. Suprayogi, I would like a demo of "+n+".";}};
+  var lang="id";
+
+  /* bahasa */
+  var els=[].slice.call(document.querySelectorAll("[data-en]"));
+  els.forEach(function(e){e.setAttribute("data-id",e.innerHTML);});
+  var bi=document.getElementById("btn-id"),be=document.getElementById("btn-en");
+  function setLang(l){
+    lang=l;
+    els.forEach(function(e){e.innerHTML=e.getAttribute(l==="en"?"data-en":"data-id");});
+    document.documentElement.lang=l;
+    bi.setAttribute("aria-pressed",l==="id");
+    be.setAttribute("aria-pressed",l==="en");
+    var t=base+encodeURIComponent(MSG[l]);
+    ["cta-wa","cta-wa2","wa-big","dock-wa"].forEach(function(id){var a=document.getElementById(id);if(a)a.href=t;});
+    [].forEach.call(document.querySelectorAll("[data-ask]"),function(a){a.href=base+encodeURIComponent(ASK[l](a.getAttribute("data-ask")));});
+    renderSim();
+    try{localStorage.setItem("cv-lang",l);}catch(x){}
+  }
+  bi.addEventListener("click",function(){setLang("id");});
+  be.addEventListener("click",function(){setLang("en");});
+
+  /* simulasi */
+  var VERD={
+    id:["Berisiko pending tinggi","Berisiko pending","Perlu perbaikan","Hampir siap","Siap diajukan"],
+    en:["High pending risk","Pending risk","Needs fixing","Almost ready","Ready to submit"]
+  };
+  var HINT={
+    id:function(n){return n===4?"Semua bagian sesuai dan konsisten.":(4-n)+" pemeriksaan lagi sebelum klaim siap diajukan.";},
+    en:function(n){return n===4?"Every part agrees and is consistent.":(4-n)+" more check"+(4-n>1?"s":"")+" before the claim is ready to submit.";}
+  };
+  var sw=[].slice.call(document.querySelectorAll(".sw"));
+  var fg=document.getElementById("fg"),num=document.getElementById("num"),verdict=document.getElementById("verdict"),hint=document.getElementById("hint");
+  function renderSim(){
+    var n=sw.filter(function(b){return b.getAttribute("aria-checked")==="true";}).length;
+    fg.setAttribute("stroke-dashoffset",(326.7*(1-n/4)).toFixed(1));
+    num.textContent=n+"/4";
+    verdict.textContent=VERD[lang][n];
+    verdict.className="verdict"+(n===4?" done":"");
+    hint.textContent=HINT[lang](n);
+  }
+  sw.forEach(function(b){b.addEventListener("click",function(){
+    b.setAttribute("aria-checked",b.getAttribute("aria-checked")==="true"?"false":"true");
+    renderSim();
+  });});
+
+  /* salin */
+  [].forEach.call(document.querySelectorAll("[data-copy]"),function(b){
+    b.addEventListener("click",function(){
+      var span=b.querySelector("span"),orig=span.innerHTML;
+      function done(ok){
+        span.textContent=ok?(lang==="en"?"Copied":"Tersalin"):(lang==="en"?"Select the text above and copy it":"Salin manual dari teks di atas");
+        setTimeout(function(){span.innerHTML=orig;},1800);
+      }
+      try{navigator.clipboard.writeText(b.getAttribute("data-copy")).then(function(){done(true);},function(){done(false);});}
+      catch(x){done(false);}
+    });
+  });
+
+  /* progres scroll + dock */
+  var prog=document.getElementById("progress"),dock=document.getElementById("dock"),contact=document.getElementById("kontak");
+  var tick=false;
+  function onScroll(){
+    if(tick)return;tick=true;
+    requestAnimationFrame(function(){
+      var h=document.documentElement.scrollHeight-window.innerHeight;
+      prog.style.transform="scaleX("+(h>0?Math.min(1,window.scrollY/h):0)+")";
+      var cr=contact.getBoundingClientRect();
+      var show=window.scrollY>620&&cr.top>window.innerHeight*0.6;
+      dock.classList.toggle("show",show);
+      tick=false;
+    });
+  }
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  /* nav aktif */
+  var links=[].slice.call(document.querySelectorAll(".nav a.l"));
+  if("IntersectionObserver" in window){
+    var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(a){a.removeAttribute("aria-current");});
+          var a=map[e.target.id];if(a)a.setAttribute("aria-current","true");
+        }
+      });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)io.observe(s);});
+
+    /* cadangan reveal untuk browser tanpa scroll-driven animation */
+    if(!(window.CSS&&CSS.supports&&CSS.supports("animation-timeline: view()"))){
+      var rv=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");rv.unobserve(e.target);}});
+      },{rootMargin:"0px 0px -8% 0px",threshold:0.05});
+      [].forEach.call(document.querySelectorAll(".rv"),function(el){rv.observe(el);});
+    }
+  }
+
+  var saved=null;try{saved=localStorage.getItem("cv-lang");}catch(x){}
+  var pref=saved||((navigator.language||"id").toLowerCase().indexOf("id")===0?"id":"en");
+  setLang(pref==="en"?"en":"id");
+})();
+</script>
+</body>
+</html>
